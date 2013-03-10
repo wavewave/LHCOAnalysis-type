@@ -20,9 +20,9 @@ cabal install  --enable-documentation
 cabal haddock --hyperlink-source
 cabal copy 
 
+# upload documentation
 tar cvzf LHCOAnalysis-type.tar.gz $HOME/.cabal/share/doc/LHCOAnalysis* 
 echo $CR | curl --digest -T LHCOAnalysis-type.tar.gz -K - $SRVRURL 
-
 
 # this is needed for checking
 cabal install --enable-tests
