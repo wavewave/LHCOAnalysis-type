@@ -32,6 +32,8 @@ module HEP.Parser.LHCOAnalysis.PhysObj (
   first_negative, 
   prettyprint, 
   prettyprintevent,
+  isElectron,
+  isMuon,
   -- * Event
   PhyEvent, 
   PhyEventClassified(..), 
@@ -176,6 +178,13 @@ data Lepton12Obj where
   LO_Elec :: PhyObj Electron -> Lepton12Obj
   LO_Muon :: PhyObj Muon     -> Lepton12Obj
   
+isElectron :: Lepton12Obj -> Bool 
+isElectron (LO_Elec _) = True
+isElectron (LO_Muon _) = False
+
+isMuon :: Lepton12Obj -> Bool
+isMuon = not . isElectron
+
 
 -- | Heterotic container for jet and bjet. 
 data JetBJetObj where
