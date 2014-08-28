@@ -1,5 +1,5 @@
 Name:		LHCOAnalysis-type
-Version:	0.999
+Version:	1.0
 Synopsis:	LHCOAnalysis-type : LHC Olympics Type 
 Description: 	LHCOAnalysis-type : LHC Olympics Type 
                 (output type of PGS detector simulator) 
@@ -9,7 +9,6 @@ Author:		Ian-Woo Kim
 Maintainer: 	Ian-Woo Kim <ianwookim@gmail.com>
 Build-Type: 	Simple
 Cabal-Version:  >= 1.2
-
 
 Library
   hs-source-dirs: src
